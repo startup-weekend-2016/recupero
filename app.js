@@ -24,7 +24,7 @@ app.use(bodyParser.urlencoded({ extended: true })); //for parsing application/x-
 //***App Configuration***
 
 //***Server Start***
-var server = app.listen(8000, function() {
+var server = app.listen(process.env.PORT, function() {
   console.log("App is listening on http://localhost:%d", server.address().port);
 });
 var io = require('socket.io')(server);
